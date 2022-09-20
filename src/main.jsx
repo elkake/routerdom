@@ -4,7 +4,7 @@ import App from './App';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename="ejemplo4">
     <App />
   </BrowserRouter>
 );
