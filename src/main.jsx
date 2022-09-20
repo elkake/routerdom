@@ -4,7 +4,7 @@ import App from './App';
 import { BrowserRouter as Buscador } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Buscador>
+  <Buscador basename="/ejemplo3">
     <App />
   </Buscador>
 );
