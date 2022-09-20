@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import '../App.css';
+import NavLinkR from './NavLinkR';
 function Header() {
   return (
     <header>
@@ -8,17 +9,10 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" className={e => console.log('Home' + e.isActive)}>
-              Home
-            </NavLink>
+            <NavLinkR to="/home">Home</NavLinkR>
           </li>
           <li>
-            <NavLink
-              to="/personajes"
-              className={e => console.log('Buscar' + e.isActive)}
-            >
-              Buscar
-            </NavLink>
+            <NavLinkR to="/personajes">Buscar</NavLinkR>
           </li>
         </ul>
       </nav>

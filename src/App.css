@@ -1,6 +1,5 @@
-.is-active {
+.isActive {
   color: rgb(254, 73, 1);
-}
-.unselected {
-  color: green;
+  pointer-events: none;
+  font-weight: bold;
 }
