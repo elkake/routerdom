@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import '../App.css';
 function Header() {
   return (
     <header>
@@ -7,10 +8,17 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/" className={e => console.log('Home' + e.isActive)}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/personajes">Buscar</Link>
+            <NavLink
+              to="/personajes"
+              className={e => console.log('Buscar' + e.isActive)}
+            >
+              Buscar
+            </NavLink>
           </li>
         </ul>
       </nav>

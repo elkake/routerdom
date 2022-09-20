@@ -12,12 +12,12 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/personajes" element={<Buscar />} />
         <Route path="/personajes/:desc" element={<Personajes />}>
           <Route path="details" element={<PjDetails />} />
         </Route>
-        <Route element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
