@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/personajes" element={<Buscar />} />
-        <Route path="/personajes/:desc" element={<Personajes />}>
+        <Route path="" element={<Home />} />
+        <Route path="personajes" element={<Buscar />} />
+        <Route path="personajes/:desc" element={<Personajes />}>
           <Route path="details" element={<PjDetails />} />
         </Route>
         <Route path="*" element={<NotFound />} />
