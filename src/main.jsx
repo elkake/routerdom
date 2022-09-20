@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter as Buscador } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Buscador basename="/ejemplo3">
+  <HashRouter basename="/ejemplo4">
     <App />
-  </Buscador>
+  </HashRouter>
 );
