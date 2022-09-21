@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://elkake.github.io/ejemplo4",
+  "homepage": "https://elkake.github.io/routerdom",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,7 +14,8 @@
     "gh-pages": "4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "6.4.0"
+    "react-router-dom": "6.4.0",
+    "sass": "^1.54.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

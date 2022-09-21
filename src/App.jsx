@@ -1,7 +1,7 @@
 import './App.css';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Personajes from './Components/Personajes';
-
+import Layout from './Layout';
 import Home from './Components/Home';
 import NotFound from './Components/NotFound';
 import PjDetails from './Components/PjDetails';
@@ -9,6 +9,7 @@ import Buscar from './Components/Buscar';
 import Header from './Components/Header';
 import { AutoProvider, useAuto } from './Components/Autorizacion';
 import Login from './Components/Login';
+import Nav from './Components/Nav';
 function App() {
   const ProtectedRoute = ({ children }) => {
     const { isLogued } = useAuto();
@@ -32,31 +33,34 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Nav />
       <AutoProvider>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route exact path="/" element={<Navigate replace to="/home" />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route
-            path="/personajes"
-            element={
-              <ProtectedRoute>
-                <Buscar />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/personajes/:desc"
-            element={
-              <ProtectedRoute>
-                <Personajes />
-              </ProtectedRoute>
-            }
-          >
-            <Route path="details" element={<PjDetails />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route exact path="/" element={<Navigate replace to="/home" />} />
+            <Route exact path="/home" element={<Home />} />
+            <Route
+              path="/personajes"
+              element={
+                <ProtectedRoute>
+                  <Buscar />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/personajes/:desc"
+              element={
+                <ProtectedRoute>
+                  <Personajes />
+                </ProtectedRoute>
+              }
+            >
+              <Route path="details" element={<PjDetails />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </AutoProvider>
     </div>
   );

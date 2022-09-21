@@ -1,21 +1,18 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import '../App.css';
-import NavLinkR from './NavLinkR';
+import '../style/Header.scss';
+
+
 function Header() {
   return (
     <header>
-      <h1>BREAKING BAD API</h1>
-      <nav>
-        <ul>
-          <li>
-            <NavLinkR to="/home">Home</NavLinkR>
-          </li>
-          <li>
-            <NavLinkR to="/personajes">Buscar</NavLinkR>
-          </li>
-        </ul>
-      </nav>
+      <div className="header_container">
+        <div className="header_title-container">
+          <p></p>
+          <span>+</span>
+          <div></div>
+        </div>
+      </div>
+      
     </header>
   );
 }

@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useAuto } from './Autorizacion';
+import Enlace from './Enlace';
+
 function Buscar() {
-  const arr = [
-    { id: 0, dato: 'personaje1' },
-    { id: 1, dato: 'personaje2' },
-    { id: 2, dato: 'personaje3' },
-    { id: 3, dato: 'personaje4' },
-  ];
+  const { datos } = useAuto();
+
   return (
-    <div>
-      <h1>Buscar Personajes</h1>
-      <ul>
-        {arr.map(e => (
-          <li key={e.id}>
-            <Link to={`/personajes/${e.dato}`}>{e.dato}</Link>
-          </li>
+    <div className="personajes_enlaces-container">
+      <h1>PERSONAJES</h1>
+      <div className="personajes_links">
+        {datos.map(e => (
+          <Enlace
+            key={e.id}
+            to={`/personajes/${e.id}`}
+            src={`https://rickandmortyapi.com/api/character/avatar/${e.id}.jpeg`}
+            name={e.name}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
