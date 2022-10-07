@@ -5,3 +5,16 @@ body {
 .layout_all-container {
   position: relative;
 }
+
+@media (max-width: 1100px) {
+  .home_container-section .home_container-title h2{
+    padding: 0.5rem 1rem;
+  }
+  .home_container-section .home_container-title p {
+    padding: 1rem;
+  }
+  .pj_title{
+    padding: 0 1rem;
+    font-size: 24px;
+  }
+}

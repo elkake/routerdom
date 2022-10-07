@@ -22,13 +22,14 @@
     font-size: 2rem;
   }
   p {
-    padding: 1rem;
+    padding: 1rem 5rem;
   }
 }
 
 .home_container-img {
   width: 70%;
   height: 210px;
+  max-width: 400px;
   background: #803;
   transform: rotate(3deg);
   margin: 2rem 0;
